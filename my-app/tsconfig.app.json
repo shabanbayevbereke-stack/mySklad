@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": "./",
+      "paths": {
+        "@/*": ["src/*"],
+        "@assets/*": ["src/assets/*"],
+        "@components/*": ["src/components/*"],
+        "@utils/*": ["src/utils/*"]
+      }
+  },
+  "include": ["src", "src/features/warehouses/пробные/cargo/cargo.api.ts", "src/features/warehouses/пробные/cargo/cargo.types.ts", "src/features/warehouses/пробные/cargo/CargoDetail.tsx", "src/features/warehouses/пробные/cargo/CargoForm.tsx", "src/features/warehouses/пробные/cargo/CargoList.tsx", "src/features/warehouses/пробные/cargo/useCargo.ts", "src/features/warehouses/пробные/useWarehouses.ts", "src/features/warehouses/пробные/warehouse.api.ts", "src/features/warehouses/пробные/warehouse.types.ts", "src/features/warehouses/пробные/WarehouseDetail.tsx", "src/features/warehouses/пробные/WarehouseForm.tsx", "src/features/warehouses/пробные/WarehouseList.tsx"]
+}
