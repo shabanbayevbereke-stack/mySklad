@@ -120,7 +120,29 @@ export default function CargoForm({
             <InputNumber min={0} style={{ width: "100%" }} />
           </Form.Item>
         </div>
-
+        <Form.Item
+          label="Общий вес"
+          name="totalWeight"
+          rules={[
+            { required: true },
+            ({ getFieldValue }) => ({
+              validator(_, value) {
+                if (value <= getFieldValue("containSizeX"))
+                  return Promise.resolve();
+                return Promise.reject(
+                  new Error("Размер превышает вместимость"),
+                );
+              },
+            }),
+          ]}
+        >
+          <InputNumber
+            value={
+              form.getFieldValue("netWeight") + form.getFieldValue("packWeight")
+            }
+            disabled
+          />
+        </Form.Item>
         <hr style={{ border: "0.5px solid #f0f0f0", marginBottom: "20px" }} />
 
         <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
